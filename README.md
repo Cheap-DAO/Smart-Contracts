@@ -1,15 +1,19 @@
-# Basic Sample Hardhat Project
+# Cheap DAO Smart Contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Steps to setup the contracts:-
 
-Try running some of the following tasks:
+- install the dependencies using `yarn install`
+- Copy the .env.template to .env, and update the values in the .env file.
+- Deploy the contracts using the following command:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+```bash
+npx hardhat run scripts/deployContracts.js --network polygon
+npx hardhat run scripts/deployContracts.js --network mainnet 
+```
+
+- Connect both treasury and governance contracts using the following command:
+
+```bash
+npx hardhat run scripts/setUpFxTunnel.js --network polygon
+npx hardhat run scripts/setUpFxTunnel.js --network mainnet 
 ```

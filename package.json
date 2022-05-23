@@ -1,5 +1,20 @@
 {
-  "name": "hardhat-project",
+  "name": "cheap-dao-smart-contracts",
+  "author": {
+    "name": "Yash Goyal",
+    "email": "yashgo0018@gmail.com",
+    "url": "https://github.com/yashgo0018"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "github:Cheap-DAO/Smart-Contracts.git",
+  "scripts": {
+    "hardhat": "hardhat",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat --run scripts/deploy-contracts.js",
+    "console": "hardhat console"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
@@ -7,5 +22,9 @@
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.5",
     "hardhat": "^2.9.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "dotenv": "^16.0.1"
   }
 }
